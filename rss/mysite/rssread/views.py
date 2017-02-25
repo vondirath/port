@@ -13,5 +13,5 @@ def index(request):
     feeds = feedparser.parse('http://feeds.abcnews.com/abcnews/topstories')
     
     context = {"feeds" : feeds.entries}
-
     return render(request, 'rssread/index.html', context)
+

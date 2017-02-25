@@ -1,5 +1,10 @@
-<ul>
+{% extends 'rssread/base.html' %}
+{% block content %}
+<input id="search-box" actiplaceholder="Filter.." />
+<ul id="u_list">
+<input id="pubdate" type="submit" value="Date"></input>
 {% for entry in feeds %}
-<li><a href="{{entry.link}}">{{entry.title}}</a></li>
+<li><a id="{{ entry.published }}" href="{{entry.link}}">{{entry.title}}</a></li>
 {% endfor %}
 </ul>
+{% endblock %}
